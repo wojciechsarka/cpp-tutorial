@@ -1,0 +1,14 @@
+#include "../inc/Debug.hpp"
+#include "../inc/Logger.hpp"
+
+Debug& Debug::instance()
+{
+    std::lock_guard<std::mutex> guard(Debug::constraction_mutex);
+    static Debug _instance;
+    return _instance;
+}
+
+void Debug::log(const std::string& text) const
+{
+    Logger::instance().log("DEBUG : " + text);
+}

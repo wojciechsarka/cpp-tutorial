@@ -1,0 +1,29 @@
+
+
+Nazwa: 
+	singleton
+
+Klasyfikacja: 
+	wzorzec konstrukcyjny i obiektowy
+
+Problem: 
+	ograniczenie mozliwosci tworzenia obiektow danej klasy do jednej instancji oraz zapewnienie
+	globalnego dostepu do stworzonego obiektu - obiektowa alternatywa dla zmiennych globalnych.
+
+Rozwiazanie:
+	diagram.png
+
+Konsekwencje:
+
+	+ łatwy i jasno okreslony dostep do instancji - statyczna metoda instance()
+	+ tworzenie instancji dopiero przy pierwszym uzyciu - lazy initialization
+	+ ograniczenie maksymalnej ilosci instancji - samodzielna kontrola
+
+	- zwolnienie zasobow po zakonczeniu glownej funkcji programu - instancja zyje tak dlugo jak aplikacja
+	- sztywne ustawianie w kodzie ilosci dostepnych, wygenerowanych instancji - mala eleastycznosc
+	- trudne testowanie i usuwanie/wykrywanie bledow - globalnosc klasy
+	- lamanie zasady SOLID SRP - dodatkowa funkcjonalonosc - tworzenie swojej wlasnej instacji 
+	- wielowatkowosc - wymuszenie doimplementowania mechanizmu synchoronizujacego operacje 
+	  towrzenia i sprawdzania istnienia instancji
+	- mocno uzalezniajacy wsrod poczatkujacych programistow
+

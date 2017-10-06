@@ -17,9 +17,9 @@ Konsekwencje:
 
 	+ łatwy i jasno okreslony dostep do instancji - statyczna metoda instance()
 	+ tworzenie instancji dopiero przy pierwszym uzyciu - lazy initialization
-	+ ograniczenie maksymalnej ilosci instancji - samodzielna kontrola
+	+ ograniczenie maksymalnej ilosci instancji - samodzielna kontrola, prywatny konstruktor
 
-	- zwolnienie zasobow po zakonczeniu glownej funkcji programu - instancja zyje tak dlugo jak aplikacja
+	- zwolnienie zasobow po zakonczeniu glownej funkcji programu - dlugosc zycia aplikacji
 	- sztywne ustawianie w kodzie ilosci dostepnych, wygenerowanych instancji - mala eleastycznosc
 	- trudne testowanie i usuwanie/wykrywanie bledow - globalnosc klasy
 	- lamanie zasady SOLID SRP - dodatkowa funkcjonalonosc - tworzenie swojej wlasnej instacji 

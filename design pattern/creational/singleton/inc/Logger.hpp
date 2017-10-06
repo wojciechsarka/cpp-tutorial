@@ -1,16 +1,14 @@
 #pragma once
 
-#include "ILogger.hpp"
-
 #include <mutex>
 
-class Logger final : public ILogger
+class Logger final
 {
 
 public:
     static Logger& instance();
 
-    void log(const std::string&) const override;
+    void log(const std::string&) const;
 
     Logger(const Logger&) = delete;
     Logger(Logger&&) = delete;

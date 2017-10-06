@@ -1,0 +1,24 @@
+
+
+Nazwa: 
+	wizytator/odwiedzajacy
+
+Klasyfikacja: 
+	wzorzec czynnosciowy i obiektowy
+
+Problem: 
+        mechanizm odwiedzania obiektow i wykonywania na nich konkretnych czynnosci, 
+	oddzielajacy algorytmy od struktur obiektow na ktorych operuje.
+
+Rozwiazanie:
+	diagram.png
+
+Konsekwencje:
+
+	+ rozszerzenie funkcjonalnosci struktury elementow, bez ich wewnetrznej modyfikacji
+	+ mniejsze klasy, zdefiniowane na wykonywanie konkretnego zadania
+
+	- znajomosc wewnetrznej struktury danych odwiedzanego obiektu (friend deklaracje) - 
+		naruszenie zasady hermetyzacji obiektu
+	
+

@@ -7,7 +7,7 @@ class Rectangle : public Shape
 
 public:
 
-    Rectangle(double a, double b);
+    Rectangle(double, double);
 
     void accept(const IVisitor&) const override;
 

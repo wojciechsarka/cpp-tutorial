@@ -7,7 +7,7 @@ class Square : public Shape
 
 public:
 
-    Square(double a);
+    Square(double);
 
     void accept(const IVisitor&) const override;
 

@@ -11,7 +11,7 @@ class AreaVisitor : public IVisitor
  
 public:
 
-    AreaVisitor(double& result);
+    AreaVisitor(double&);
 
     void visit(const Square&)    const override;
     void visit(const Triangle&)  const override;
@@ -19,6 +19,6 @@ public:
 
 private:
 
-    double& result;
+    double& area;
 
 };

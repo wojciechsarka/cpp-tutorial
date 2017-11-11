@@ -7,7 +7,7 @@ class Triangle : public Shape
 
 public:
 
-    Triangle(double a, double h);
+    Triangle(double, double);
 
     void accept(const IVisitor&) const override;
 

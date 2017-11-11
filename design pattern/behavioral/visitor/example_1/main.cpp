@@ -14,23 +14,22 @@ int main()
 {
     std::vector<std::shared_ptr<IShape>> shapes = 
     {
-	std::make_shared<Rectangle>(2, 6)
-	,std::make_shared<Triangle>(2, 5)
-	,std::make_shared<Triangle>(3, 4)
-	,std::make_shared<Square>(4)
-	,std::make_shared<Rectangle>(3, 4)
-	,std::make_shared<Triangle>(1, 3)
-	,std::make_shared<Triangle>(3, 5)
+        std::make_shared<Rectangle>(2, 6),
+	std::make_shared<Triangle>(2, 5),
+	std::make_shared<Triangle>(3, 4),
+	std::make_shared<Square>(4),
+	std::make_shared<Rectangle>(3, 4),
+	std::make_shared<Triangle>(1, 3),
+	std::make_shared<Triangle>(3, 5),
     };
-
-    PrintVisitor print;
 
     for(const auto& item : shapes)
     {
-        (*item).accept(print);
+	std::string desc;
+        (*item).accept(PrintVisitor(desc));
 
-	double result;
-        (*item).accept(AreaVisitor(result));
-	std::cout << ", area is equal: " << result << std::endl;
+	double area;
+        (*item).accept(AreaVisitor(area));
+	std::cout << desc << ", area is equal: " << area << std::endl;
     }
 }

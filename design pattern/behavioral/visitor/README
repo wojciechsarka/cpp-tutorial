@@ -1,24 +1,27 @@
 
 
 Nazwa: 
-	wizytator/odwiedzajacy
+    wizytator/odwiedzajacy
 
 Klasyfikacja: 
-	wzorzec czynnosciowy i obiektowy
+    wzorzec czynnosciowy i obiektowy
 
 Problem: 
-        mechanizm odwiedzania obiektow i wykonywania na nich konkretnych czynnosci, 
-	oddzielajacy algorytmy od struktur obiektow na ktorych operuje.
+    mechanizm odwiedzania obiektow i wykonywania na nich konkretnych czynnosci, 
+    oddzielajacy algorytmy od struktur obiektow na ktorych operuje.
 
 Rozwiazanie:
-	diagram.png
+    diagram.png
 
 Konsekwencje:
 
-	+ rozszerzenie funkcjonalnosci struktury elementow, bez ich wewnetrznej modyfikacji
-	+ mniejsze klasy, zdefiniowane na wykonywanie konkretnego zadania
+    + latwiejsze dodawanie nowych funkcjonalnosci, bez wewnetrznej modyfikacji istniejacych struktur
+    + odzielenie struktury danych (operacje powiazane) od algortymow (operacje niepowiazane)
+    + mniejsze klasy, zdefiniowane na wykonywanie konkretnego zadania
+    + możliwość odwiedzania różnych hierarchii klas (przeciwieństwo Iteratora)
 
-	- znajomosc wewnetrznej struktury danych odwiedzanego obiektu (friend deklaracje) - 
-		naruszenie zasady hermetyzacji obiektu
+    - trudne dodanie nowych konkretnych struktur danych - powstanie nowej operacji wizytora
+    - znajomosc wewnetrznej struktury danych odwiedzanego obiektu (friend deklaracje) - 
+        naruszenie zasady hermetyzacji obiektu
 	
 

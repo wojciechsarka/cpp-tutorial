@@ -1,22 +1,22 @@
 #include "../inc/AreaVisitor.h"
 
-AreaVisitor::AreaVisitor(double& result)
-    : result(result)
+AreaVisitor::AreaVisitor(double& area)
+    : area(area)
 {
 }
 
 void AreaVisitor::visit(const Rectangle& shape) const
 {
-    result = shape.get_a() * shape.get_b();
+    area = shape.get_a() * shape.get_b();
 }
 
 void AreaVisitor::visit(const Square& shape) const
 {
-    result = shape.get_a() * shape.get_a();
+    area = shape.get_a() * shape.get_a();
 }
 
 void AreaVisitor::visit(const Triangle& shape) const
 {
-    result = shape.get_a() * shape.get_h() / 2.0;
+    area = shape.get_a() * shape.get_h() / 2.0;
 }
 
